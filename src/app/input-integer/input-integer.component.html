@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center align-items-center gap-2">
+    <button class="btn btn-outline-secondary btn-sm" 
+    (click)="downQuantity(product)">−</button>
+
+    <input type="number" 
+    [(ngModel)]="product.quantity"  
+    min="0" 
+    [max]="product.stock" 
+    class="form-control text-center" 
+    style="width: 50px;"  
+    (blur)="validateQuantity(product)">
+              
+    <button class="btn btn-outline-secondary btn-sm" 
+    (click)="upQuantity(product)">+</button>
+
+</div>
+
