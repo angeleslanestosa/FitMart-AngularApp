@@ -1,0 +1,44 @@
+
+  h1 {
+    font-size: 70px;
+    color: rgb(155, 170, 142);
+    font-weight: 650;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 20px;
+    font-family:inherit;
+    justify-content: left;
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+    justify-content: left;
+    margin: 30px;
+    margin-top: 20px;
+  }
+
+  .footer{
+    justify-content: center;
+    background-color: transparent;
+    padding:1 rem 0;
+    display: flex;
+    margin-top: 30%;
+  }
+
+
+  #slogan{
+    font-style: oblique;
+    font-family:inherit;
+    margin-bottom: 30px; 
+ }
+
+
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+  }

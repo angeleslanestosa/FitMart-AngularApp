@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(165, 165, 165);
+
+}
+
+.table tr.clearance td{
+    background: rgb(226, 237, 189);
+    border: 2px solid green;
+}
+
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    vertical-align: middle;
+  }
+
+  img {
+    border-radius: 10px;
+    
+  }
+
+  .btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-weight: bold;
+  }
+}
