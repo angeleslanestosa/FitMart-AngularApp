@@ -1,17 +1,18 @@
 <div class="d-flex justify-content-center align-items-center gap-2">
     <button class="btn btn-outline-secondary btn-sm" 
-    (click)="downQuantity(product)">−</button>
+    (click)="downQuantity()">−</button>
 
     <input type="number" 
-    [(ngModel)]="product.quantity"  
+    [(ngModel)]="quantity"  
+    (ngModelChange)="quantity = $event; validateQuantity()"
     min="0" 
-    [max]="product.stock" 
+    [max]="max" 
     class="form-control text-center" 
     style="width: 50px;"  
-    (blur)="validateQuantity(product)">
+    (blur)="validateQuantity()">
               
     <button class="btn btn-outline-secondary btn-sm" 
-    (click)="upQuantity(product)">+</button>
+    (click)="upQuantity()">+</button>
 
 </div>
 

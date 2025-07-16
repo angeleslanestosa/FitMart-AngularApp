@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Product } from './Product';
 import { FormsModule } from '@angular/forms';
 import { InputIntegerComponent } from '../input-integer/input-integer.component';
+import { ProductCartService } from '../product-cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -88,10 +89,19 @@ export class ProductListComponent implements OnInit{
 
   ]
 
-  ngOnInit(): void {
-    console.log("Componente ProductList cargado");
+  constructor(private shopcart : ProductCartService) {
   }
 
- 
+  addToCart (product: Product): void {
+    this.shopcart.addToCart(product);
+  }
+
+  maxReached(m:string){
+    alert(m);
+  }
+
+   ngOnInit(): void {
+  }
+
 
 }

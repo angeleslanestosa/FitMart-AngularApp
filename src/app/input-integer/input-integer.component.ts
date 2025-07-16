@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Product } from '../product-list/Product';
 
 
 @Component({
@@ -12,32 +11,45 @@ import { Product } from '../product-list/Product';
 })
 export class InputIntegerComponent implements OnInit{
 
-  @Input() product!:Product;
+  constructor(){}
+
+  @Input() quantity: number = 0;
+
+  @Input() max : number = 0;
+
+  @Output() quantityChange = new EventEmitter<number>();
+
+  @Output() maxReached = new EventEmitter<string>();
 
   ngOnInit(): void{
 
   }
 
-  upQuantity(product:Product): void{
-    if(product.quantity < product.stock){
-      product.quantity++;
+  upQuantity(): void{
+    if(this.quantity < this.max){
+      this.quantity++;
+      this.quantityChange.emit(this.quantity);
+    } else{
+      this.maxReached.emit("Se alcanzó el máximo de productos en stock");
     }
   }
 
-  downQuantity(product:Product): void{
-    if(product.quantity>0){
-      product.quantity--;
+  downQuantity(): void{
+    if(this.quantity>0){
+      this.quantity--;
+      this.quantityChange.emit(this.quantity);
     }
 
   }
 
-  validateQuantity(product : Product):void{
-    if(product.quantity<0){
-      product.quantity = 0;
+  validateQuantity():void{
+    if(this.quantity<0){
+      this.quantity = 0;
     }
-    if(product.quantity>product.stock){
-      product.quantity = product.stock;
+    if(this.quantity>this.max){
+      this.quantity = this.max;
     }
+    this.quantityChange.emit(this.quantity);
   }
 
 }
