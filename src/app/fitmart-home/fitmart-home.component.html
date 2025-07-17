@@ -1,2 +1,59 @@
-<p>Este es el homeeee
-</p>
+<!-- Hero principal -->
+<section class="hero">
+  <div class="content">
+    <span class="badge">🟠 Nuevos productos cada semana</span>
+    <h1>Tu salud es nuestra <span class="highlight">PRIORIDAD</span></h1>
+    <p>
+      Descubre los mejores productos naturales y suplementos para una vida más saludable.
+      Calidad garantizada y envío gratis en compras mayores a $50.
+    </p>
+    <div class="metrics">
+      <div><strong>500+</strong><span>Productos</span></div>
+      <div><strong>10k+</strong><span>Clientes</span></div>
+      <div><strong>4.9</strong><span>Rating</span></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="assets/img/hero-producto.png" alt="Productos FitMart" />
+  </div>
+</section>
+
+
+<!-- Categorías -->
+<section class="categories">
+  <h2>Explora por Categorías</h2>
+  <p>Encuentra exactamente lo que necesitas para tu estilo de vida saludable</p>
+  <div class="category-grid">
+    <div *ngFor="let c of categorias">
+      <img [src]="c.icon" [alt]="c.label" />
+      <span>{{ c.label }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<section class="benefits">
+  <h2>¿Por qué elegir FitMart?</h2>
+  <p>Nos comprometemos a ofrecerte la mejor experiencia de compra en productos saludables</p>
+  <div class="benefit-list">
+    <div>
+      <img src="assets/img/truck.png" alt="Envío Gratis" />
+      <h3>Envío Gratis</h3>
+      <p>En compras mayores a $15.000</p>
+    </div>
+    <div>
+      <img src="assets/img/certified.png" alt="Certificados" />
+      <h3>Productos Certificados</h3>
+      <p>100% originales y seguros</p>
+    </div>
+    <div>
+      <img src="assets/img/organic.png" alt="Orgánicos" />
+      <h3>Naturales y Orgánicos</h3>
+      <p>Ingredientes de la mejor calidad</p>
+    </div>
+    <div>
+      <img src="assets/img/guarantee.png" alt="Garantía" />
+      <h3>Garantía de Calidad</h3>
+      <p>30 días de garantía</p>
+    </div>
+  </div>

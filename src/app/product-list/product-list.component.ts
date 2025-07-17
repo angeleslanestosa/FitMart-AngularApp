@@ -94,6 +94,8 @@ export class ProductListComponent implements OnInit{
 
   addToCart (product: Product): void {
     this.shopcart.addToCart(product);
+    product.stock -= product.quantity;
+    product.quantity = 0;
   }
 
   maxReached(m:string){

@@ -1,1 +1,9 @@
-<h2>🛒  Carrito de Compras</h2>
+<h2 class="cart-title"> Carrito de Compras 🛒</h2>
+
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center"
+      *ngFor="let product of cartList$ | async">
+    {{ product.name }}
+  <span class="badge rounded-pill cart-badge">{{ product.quantity }}</span>
+  </li>
+</ul>
