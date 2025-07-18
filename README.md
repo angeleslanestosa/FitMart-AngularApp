@@ -25,7 +25,7 @@ El sitio corre por el puerto 4200  `http://localhost:4200/home`
 
 Repositorio GitHub : `https://github.com/angeleslanestosa/FitMart-AngularApp`
 
-Proyecto en Stackblitz : `https://stackblitz.com/edit/github-qpfunrpj`
+Proyecto en Stackblitz : `https://stackblitz.com/edit/github-o3mkhj9s`
 
 Mis datos personales: 
 - Nombre: Ángeles.
