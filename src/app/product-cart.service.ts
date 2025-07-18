@@ -12,7 +12,7 @@ export class ProductCartService {
   constructor() { }
 
   addToCart(product: Product) {
-    let item: Product | undefined = this._cartList.find((v1) => v1.name == product.name);  //el metodo find uede devolver undefined si no encuentra coincidencia
+    let item: Product | undefined = this._cartList.find((v1) => v1.name == product.name);  //el metodo find puede devolver undefined si no encuentra coincidencia
 
     if(!item){
       this._cartList.push({...product});

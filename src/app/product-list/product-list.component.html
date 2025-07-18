@@ -2,47 +2,51 @@
 <div class="container mt-4">
   <h2 class="mb-4 text-start text-secondary">✔️ Lista de Productos</h2>
 
-  <table class="table table-hover align-middle text-center">
-    <thead class="table-light">
-      <tr>
-        <th>Imagen</th>
-        <th>Nombre</th>
-        <th>Tipo</th>
-        <th>Precio</th>
-        <th>Stock</th>
-        <th>Cantidad</th>
-        <th>Compra</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (product of products; track product.name) {
-        <tr [ngClass]="{'table-success': product.clearance}">
-          <td><img [src]="product.image" [alt]="product.name" class="img-thumbnail" style="max-height: 280px;"></td>
-          <td class="text-uppercase fw-semibold">{{ product.name }}</td>
-          <td>{{ product.type }}</td>
-          <td>
-            {{ product.price | currency }}
-            @if (product.clearance) {
-              <span class="badge bg-danger ms-1">🔥 OFF</span>
-            }
-          </td>
-          <td>
-            @if (product.stock <= 0) {
-              <span class="badge bg-warning text-dark">Sin Stock</span>
-            } 
-          </td>
-          <td>
-            <app-input-integer [(quantity)] = "product.quantity" [max] = "product.stock" (quantityChange)="product.quantity = $event" (maxReached)="maxReached($event)"></app-input-integer>
-          </td>
-          <td>
-            <button class="btn btn-outline-success" style="width: 80px;" (click)="addToCart(product)">Agregar</button>
-          </td>
-        </tr>
-      } @empty {
+  <div class="table-responsive">
+      <table class="table table-hover align-middle text-center">
+      <thead class="table-light">
         <tr>
-          <td colspan="6">No hay productos disponibles.</td>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Cantidad</th>
+          <th>Compra</th>
         </tr>
-      }
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        @for (product of products; track product.name) {
+          <tr [ngClass]="{'table-success': product.clearance}">
+            <td><img [src]="product.image" [alt]="product.name" class="img-thumbnail" style="max-height: 280px;"></td>
+            <td class="text-uppercase fw-semibold">{{ product.name }}</td>
+            <td>{{ product.type }}</td>
+            <td>
+              {{ product.price | currency }}
+              @if (product.clearance) {
+                <span class="badge bg-danger ms-1">🔥 OFF</span>
+              }
+            </td>
+            <td>
+              @if (product.stock <= 0) {
+                <span class="badge bg-warning text-dark">Sin Stock</span>
+              } 
+            </td>
+            <td>
+              <app-input-integer [(quantity)] = "product.quantity" [max] = "product.stock" (quantityChange)="product.quantity = $event" (maxReached)="maxReached($event)"></app-input-integer>
+            </td>
+            <td>
+              <button class="btn btn-outline-success" style="width: 80px;" (click)="addToCart(product)">Agregar</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="6">No hay productos disponibles.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+  </div>
+
 </div>
