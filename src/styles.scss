@@ -1,6 +1,6 @@
 body {
 
-    background-color: white;
+    background-color: rgba(215, 215, 197, 0.751);
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -12,5 +12,15 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    flex-direction: column;
+    width: max-content;
+  }
+
+  
+
 }
 

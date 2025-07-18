@@ -1,7 +1,7 @@
 
   h1 {
     font-size: 70px;
-    color: rgb(155, 170, 142);
+    color: rgb(114, 114, 72);
     font-weight: 650;
     line-height: 100%;
     letter-spacing: -0.125rem;
@@ -20,10 +20,10 @@
 
   .footer{
     justify-content: center;
-    background-color: transparent;
+    background-color: #f8f8f8d0;
     padding:1 rem 0;
     display: flex;
-    margin-top: 30%;
+
   }
 
 
@@ -33,12 +33,10 @@
     margin-bottom: 30px; 
  }
 
+body {
+  margin: 0;
+}
 
 
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
 
-  }
+

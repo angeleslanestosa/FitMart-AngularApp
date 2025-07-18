@@ -42,6 +42,7 @@ $font-main: 'Segoe UI', sans-serif;
     p {
       font-size: 1.1rem;
       margin-bottom: 2rem;
+      margin-right: 10px;
     }
 
  
@@ -64,7 +65,7 @@ $font-main: 'Segoe UI', sans-serif;
   }
 
   .hero-image {
-    flex: 1 1 40%;
+    flex: 1 1 50%;
     text-align: center;
     img {
       max-width: 100%;
@@ -81,6 +82,7 @@ $font-main: 'Segoe UI', sans-serif;
   h2 {
     font-size: 2rem;
     margin-bottom: .5rem;
+    color: rgb(85, 85, 19);
   }
   p {
     margin-bottom: 2rem;
@@ -135,3 +137,5 @@ $font-main: 'Segoe UI', sans-serif;
     }
   }
 }
+
+
