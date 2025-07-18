@@ -1,6 +1,6 @@
 # FitMart  
 
-La temática elegida para el proyecto Angular fue un MarketPlace natural, de productos naturales de dietetica, proteicos, bebidas, y más.
+La temática elegida para el proyecto Angular standalone fue un MarketPlace natural, de productos naturales de dietetica, proteicos, bebidas, y más.
 El nombre FItMat fue pensado a raíz de la combinación de las palabras fitness y smart, con la intencion de fusionarlos y que haga alución a una compra inteligente, saludable y desde casa. 
 
 El sitio es una plataforma e-commerce que cuenta con tres secciones, home (que es FitMart), productos, donde se muestra la tabla de productos disponibles, y el carrito de compras y por último la sección contacto donde podrán obtener nuestra información de contacto y saber un poco más sobre nosotros. 
@@ -23,9 +23,9 @@ Tecnologías utilizadas:
 
 El sitio corre por el puerto 4200  `http://localhost:4200/home`
 
-Link a Git : ` `
+Repositorio GitHub : `https://github.com/angeleslanestosa/FitMart-AngularApp`
 
-Link a Stackblitz : ` `
+Proyecto en Stackblitz : `https://stackblitz.com/edit/github-qpfunrpj`
 
 Mis datos personales: 
 - Nombre: Ángeles.
